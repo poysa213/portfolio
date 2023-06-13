@@ -1,0 +1,56 @@
+.first-4 {
+    animation: letterRotate1 infinite 5s linear;
+}
+
+@keyframes letterRotate1 {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.center-0 {
+    animation: letterRotate2 infinite 6s linear;
+}
+
+@keyframes letterRotate2 {
+    from {
+        transform: rotate3d(0deg);
+    }
+
+    to {
+        transform: rotate3d(1, 1, 0, 360deg);
+    }
+}
+
+
+.second-4 {
+    animation: letterRotate1 infinite 5s linear;
+}
+
+@keyframes letterRotate3 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
