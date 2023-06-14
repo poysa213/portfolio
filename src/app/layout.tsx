@@ -9,8 +9,8 @@ import { DarkModeProvider } from "@context/darkModeContext";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathName = usePathname();
-  const FoundPaths = ['/', '/skills', '/about', '/projects']; // Add your desired paths here
-  const isNotFoundPage = !FoundPaths.includes(pathName);// Replace '/not-found' with the actual path of your 404 page
+  const FoundPaths = ['/', '/skills', '/about', '/projects']; 
+  const isNotFoundPage = !FoundPaths.includes(pathName);
 
   return (
     <html lang="en">
