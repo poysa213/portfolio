@@ -25,7 +25,7 @@ export default   [
     coverURL: "/img/projects/naturallytasty.png",
     description:
       "Ecommerce websites come in all shapes, sizes, and — of course — prices.",
-    previewURL: "naturallytasty.com",
+    previewURL: "https://naturallytasty.com",
     tools: ["Next js", "Tailwind css", 'NextAuth', 'Prisma', 'PostgreSql'],
   },
   {
@@ -34,7 +34,7 @@ export default   [
     coverURL: "/img/projects/achieve.png",
     description:
       "Achieve is a digital agency consisting of a small group of specialists, each with their own specific ambitions, qualities and skills. The team is constantly abreast of the latest developments in the digital landscape. That is no problem for us, because we have made our passion our work. This is what we like and that's why we're good at it.",
-    previewURL: "achieve.nl",
+    previewURL: "https://achieve.nl",
     tools: ["Next js", "Sanity", 'PostgreSQL'],
   }
 ];
