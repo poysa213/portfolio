@@ -7,3 +7,11 @@ export const navigationRoutes = [
   "/projects",
   
 ];
+
+export const mobileNavigationRoutes = [
+  "/home",
+  "/about",
+  "/skills",
+  "/projects",
+  
+];

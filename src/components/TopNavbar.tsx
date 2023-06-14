@@ -9,7 +9,7 @@ import {
   popUp,
 } from "../content/FramerMotionVariants";
 import { useDarkMode } from "../context/darkModeContext";
-import { navigationRoutes } from "../utils/utils";
+import { navigationRoutes, mobileNavigationRoutes } from "../utils/utils";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { HamBurgerProps, MobileMenuProps, NavItemProps } from "@types";
 
@@ -93,7 +93,7 @@ export default function TopNavbar() {
       <HamBurger open={navOpen} handleClick={handleClick} />
       <AnimatePresence>
         {navOpen && (
-          <MobileMenu links={navigationRoutes} handleClick={handleClick} />
+          <MobileMenu links={mobileNavigationRoutes} handleClick={handleClick} />
         )}
       </AnimatePresence>
       <motion.div
@@ -243,7 +243,7 @@ const MobileMenu = ({ links, handleClick }:MobileMenuProps) => {
     >
       <motion.nav className="mt-28 mx-8 flex flex-col">
         {links.map((link, index) => {
-          const navlink =`${link.toLowerCase()}`;
+          const navlink = `${link.toLowerCase()}` == '/home' ? '/' : `${link.toLowerCase()}`;
           return (
             <Link href={navlink} key={`mobileNav-${index}`} passHref>
               <motion.a
