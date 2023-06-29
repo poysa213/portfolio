@@ -11,7 +11,7 @@ export function DarkModeProvider({ children }: { children: React.ReactNode }) {
   const [isDarkMode, setDarkMode] = useState(true);
 
   function updateTheme() {
-    const currentTheme = localStorage.getItem("isDarkMode") || "false";
+    const currentTheme = localStorage.getItem("isDarkMode") || "true";
     if (currentTheme === "true") {
       document.body.classList.add("dark", "darkBack");
       
