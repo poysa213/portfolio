@@ -1,23 +1,23 @@
-export default   [
+const projects =   [
   {
     id: 1,
-    name: "Ecommerce website",
-    coverURL: "https://sgwebpartners.com/wp-content/uploads/2019/04/woocommerce-wholesale-storm-creek-983x553.jpg",
+    name: "Anonymous Chat",
+    coverURL: "/img/projects/chat.png",
     description:
-      "Ecommerce websites come in all shapes, sizes, and — of course — prices.",
-    githubURL: "https://github.com/poysa213",
-    previewURL: "",
-    tools: ["Django", "React js", 'PostgreSQL'],
+      "The Anonymous Chat App is a web application that allows users to connect and chat anonymously with others. The app provides the option to create chat rooms or join existing rooms using unique room IDs.",
+    githubURL: "https://github.com/poysa213/anonymous-chat",
+    previewURL: "https://master--stalwart-rabanadas-58e94e.netlify.app/",
+    tools: ["Django", "Next js", 'WebSocket'],
   },
   {
     id: 2,
-    name: "Contacts Api",
-    coverURL: "https://images.ctfassets.net/rz1oowkt5gyp/1IgVe0tV9yDjWtp68dAZJq/36ca564d33306d407dabe39c33322dd9/TaskManagement-hero.png?w=1140&fm=webp",
+    name: "Hotel Management System",
+    coverURL: "/img/projects/hotel.png",
     description:
-      "Allow you to save your contacts (phone_number) with their names.",
-    githubURL: "https://github.com/poysa213",
-    previewURL: "https://contacts-api-3krm.vercel.app/",
-    tools: ["Django", "Django Rest Framework", 'PostgreSQL'],
+      "Our mission is to revolutionize hotel management by providing powerful, user-friendly software tools that streamline operations, elevate guest experiences, and boost profitability. Our PMS solutions exceed expectations, enabling hotels to achieve their business goals and stay ahead of the competition.",
+    githubURL: "https://github.com/HMS-ESI-SBA",
+    previewURL: "",
+    tools: ["Microservices", "Next js", 'Express js', 'Django'],
   },
   {
     id: 3,
@@ -38,3 +38,6 @@ export default   [
     tools: ["Next js", "Sanity", 'PostgreSQL'],
   }
 ];
+
+
+export default projects
