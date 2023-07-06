@@ -62,7 +62,7 @@ export default function () {
               
                 <Icon className="w-6 h-6" /> 
               </div>
-              <p className="hidden sm:inline-flex text-sm md:text-base font-semibold select-none pointer-events-none">
+              <p className="text-sm md:text-base font-semibold select-none pointer-events-none">
                 {skill.name}
               </p>
             </motion.div>
