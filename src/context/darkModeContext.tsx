@@ -8,10 +8,10 @@ export interface DarkModeContextType {
 const DarkModeContext = createContext<DarkModeContextType | null>(null);
 
 export function DarkModeProvider({ children }: { children: React.ReactNode }) {
-  const [isDarkMode, setDarkMode] = useState(true);
+  const [isDarkMode, setDarkMode] = useState(false);
 
   function updateTheme() {
-    const currentTheme = localStorage.getItem("isDarkMode") || "true";
+    const currentTheme = localStorage.getItem("isDarkMode") || "false";
     if (currentTheme === "true") {
       document.body.classList.add("dark", "darkBack");
       
