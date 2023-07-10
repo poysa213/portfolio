@@ -15,7 +15,7 @@ export default function AboutMe() {
   return (
     <section className="pageTop">
       <PageTop pageTitle="About me" />
-      <section className="px-5 sm:px-20 sm:mx-20 text-md md:m-0 sm:text-base  justify-center ">
+      <section className="text-md md:m-0 sm:text-base  justify-center ">
         <div className="items-end mx-auto flex justify-center p-16">
           <Image
             src="/img/personal/poysa213.jpg"
@@ -29,7 +29,7 @@ export default function AboutMe() {
         </div>
 
         <AnimatedText
-          className="text-slate-500 dark:text-slate-400 font-medium font-mono text-[1.2rem] animate-bounce ml-[-3rem] md:ml-[-6rem]"
+          className=" text-slate-500 dark:text-slate-400 font-medium font-mono text-[1.2rem] animate-bounce ml-[-2rem] md:ml-[-6rem]"
           variants={popUpFromBottomForText}
         >
           <span className="text-[3rem] md:text-[6rem] text-black font-sarina p-3 dark:text-white">
@@ -79,7 +79,7 @@ export default function AboutMe() {
        
 
         <AnimatedText
-          className="text-slate-500 dark:text-slate-400 font-medium font-mono p-3 text-[1.2rem] text-right animate-bounce "
+          className="mr-4 text-slate-500 dark:text-slate-400 font-medium font-mono p-3 text-[1.2rem] text-right animate-bounce "
           variants={popUpFromBottomForText}
         >
           <span className="md:text-[6rem] text-[3rem] text-black font-sarina dark:text-white text-right mr-[-4rem] md:mr-[-10rem]">
