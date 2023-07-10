@@ -43,19 +43,19 @@ export default function Home() {
                 
                 <motion.p
                   variants={opacityVariant}
-                  className="font-medium text-2xl md:text-4xl lg:text-6xl text-gray-500 mt-10"
+                  className="font-medium text-4xl md:text-4xl lg:text-6xl text-gray-500 mt-2 lg:mt-10"
                 >
                   Full Stack  Developer
                 </motion.p>
                 <motion.p
                   variants={opacityVariant}
-                  className="font-medium text-xl md:text-2xl lg:text-4xl text-gray-500 mt-10"
+                  className="font-medium text-sm md:text-2xl lg:text-4xl text-gray-500 mt-2 lg:mt-10"
                 >
                   Cyber Security enthusiast
                 </motion.p>
                 <motion.h1
                   variants={opacityVariant}
-                  className="text-lg md:text-xl lg:text-2xl font-bold  mt-8"
+                  className="text-lg md:text-xl lg:text-2xl font-bold mt-2 lg:mt-8"
                 >
                   Youcef Hanaia
                 </motion.h1>

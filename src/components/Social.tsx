@@ -10,7 +10,7 @@ export const Social = () => {
     <div className='flex items-center justify-center'>
       {socialsMedia.map((item, index) => (
         <Link href={item.url} key={index}>
-          <div className='m-3 md:text-4xl text-xs'>
+          <div className='m-3 md:text-4xl text-2xl'>
             <item.Icon/>
             </div>
         </Link>
