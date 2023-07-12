@@ -6,7 +6,8 @@
   "scripts": {
     "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python3 -m flask --app api/index run -p 5328",
     "next-dev": "next dev",
-    "dev": "concurrently \"npm run next-dev\" \"npm run flask-dev\"",
+    "old-dev": "concurrently \"npm run next-dev\" \"npm run flask-dev\"",
+    "dev":"npm run next-dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

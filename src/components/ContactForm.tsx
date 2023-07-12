@@ -21,21 +21,23 @@ const ContactForm = () => {
   const submitHandler: SubmitHandler<FormData> = async (data) => {
     try {
       setDisabled(true);
-      const response = await fetch('/api/email/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
+      // const response = await fetch('/api/email/', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify(data)
+      // });
       
-      if (response.ok) {
-        alert('Email sent!');
-        reset();
-      } else {
+      // if (response.ok) {
+      //   alert('Email sent!');
+      //   reset();
+      // } else {
        
-        alert('Error sending email. Please try again.');
-      }
+      //   alert('Error sending email. Please try again.');
+      // }
+      alert("We can't host the flask api wich is responsible for sending emails. Bcz of vercel functions limits ")
+      
     
     } catch (e) {
       console.log(e);
