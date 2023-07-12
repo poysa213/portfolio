@@ -4,7 +4,9 @@
   "private": true,
   "license": "ISC",
   "scripts": {
-    "dev": "next dev",
+    "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python3 -m flask --app api/index run -p 5328",
+    "next-dev": "next dev",
+    "dev": "concurrently \"npm run next-dev\" \"npm run flask-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@types/node": "^20.2.5",
     "@types/react": "^17.0.60",
+    "concurrently": "^8.2.0",
     "postcss": "^8.4.13",
     "postcss-preset-env": "^7.5.0",
     "tailwind-scrollbar-hide": "^1.1.7"
