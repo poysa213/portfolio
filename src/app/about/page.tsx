@@ -1,4 +1,3 @@
-
 'use client'
 import React from "react";
 import { popUpFromBottomForText } from "../../content/FramerMotionVariants";
@@ -19,7 +18,7 @@ export default function AboutMe() {
       <section className="text-md md:m-0 sm:text-base  justify-center ">
         <div className="items-end mx-auto flex justify-center p-16">
           <Image
-            src="/img/personal/poysa213.jpg"
+            src="https://i.imgur.com/N4rmiIB.jpg"
             className=" filter saturate-150 hover:saturate-0 duration-1000  rounded-lg hover:rounded-3xl drop-shadow-lg transition-all "
             width={400}
             height={300}
