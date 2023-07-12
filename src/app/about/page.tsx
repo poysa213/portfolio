@@ -9,6 +9,7 @@ import { opacityVariant } from "@/content/FramerMotionVariants";
 import { TbBrandFiverr } from 'react-icons/tb'
 import PageTop from "@components/PageTop";
 import Link from "next/link";
+import ContactForm from "@components/ContactForm";
 
 
 export default function AboutMe() {
@@ -108,6 +109,11 @@ export default function AboutMe() {
             @ Html&Css&Js <br />
           </AnimatedText>
         </AnimatedDiv>
+     
+      <PageTop pageTitle="Contact me" />
+        <ContactForm />
+  
+       
       </section>
     </section>
   );
