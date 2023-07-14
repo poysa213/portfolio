@@ -133,10 +133,11 @@ export default function TopNavbar() {
           className="flex items-center md:gap-2"
         >
           {navigationRoutes.map((link, index) => {
+            const navlink = `${link.toLowerCase()}` === '/blog' ? 'https://poysa.hashnode.dev' : `${link.toLowerCase()}`;
             return (
               <NavItem
                 key={index}
-                href={`${link}`}
+                href={navlink}
                 text={link}
                 router={router}
               />
@@ -243,7 +244,7 @@ const MobileMenu = ({ links, handleClick }:MobileMenuProps) => {
     >
       <motion.nav className="mt-28 mx-8 flex flex-col">
         {links.map((link, index) => {
-          const navlink = `${link.toLowerCase()}` == '/home' ? '/' : `${link.toLowerCase()}`;
+          const navlink = `${link.toLowerCase()}` === '/home' ? '/' : `${link.toLowerCase()}` === '/blog' ? 'https://poysa.hashnode.dev' : `${link.toLowerCase()}`;
           return (
             <Link href={navlink} key={`mobileNav-${index}`} passHref>
               <motion.a

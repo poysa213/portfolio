@@ -5,6 +5,7 @@ export const navigationRoutes = [
   "/about",
   "/skills",
   "/projects",
+  "/blog",
   
 ];
 
@@ -13,5 +14,5 @@ export const mobileNavigationRoutes = [
   "/about",
   "/skills",
   "/projects",
-  
+  "/blog",
 ];
