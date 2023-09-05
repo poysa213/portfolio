@@ -40,7 +40,7 @@ const ContactForm = () => {
       
     
     } catch (e) {
-      console.log(e);
+    
     } finally {
       setDisabled(false);
     }

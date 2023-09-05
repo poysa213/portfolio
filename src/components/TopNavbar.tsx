@@ -33,7 +33,6 @@ export default function TopNavbar() {
   const { isDarkMode, changeDarkMode } = useDarkMode();
 
   const toggle = () => {
-    console.log(isDarkMode)
     changeDarkMode(!isDarkMode);
   }
 
