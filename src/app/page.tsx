@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   FadeContainer,
   opacityVariant,
@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 import { FiDownload } from "react-icons/fi";
 import Ripples from "react-ripples";
 import { Social } from "@components/Social";
-
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-    
+  const router = useRouter();
   return (
     <>
       <div className="relative   dark:text-gray-100 max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl mx-auto">
@@ -40,12 +40,11 @@ export default function Home() {
 
             <div className="w-full flex flex-col p-5 gap-3 select-none text-center ">
               <div className="flex flex-col gap-1">
-                
                 <motion.p
                   variants={opacityVariant}
                   className="font-medium text-4xl md:text-4xl lg:text-6xl text-gray-500 mt-2 lg:mt-10"
                 >
-                  Full Stack  Developer
+                  Full Stack Developer
                 </motion.p>
                 <motion.p
                   variants={opacityVariant}
@@ -60,15 +59,13 @@ export default function Home() {
                   Youcef Hanaia
                 </motion.h1>
               </div>
-
-          
             </div>
 
             <motion.div className="rounded-md overflow-hidden" variants={popUp}>
               <Ripples className="w-full" color="rgba(0, 0, 0, 0.5)">
                 <button
                   className="flex items-center gap-2 px-5 py-2 border rounded-md border-gray-500 dark:border-gray-400 select-none  hover:bg-gray-100 dark:hover:bg-neutral-800 outline-none"
-                  onClick={() => window.open("/resume.pdf")}
+                  onClick={() => router.push("/resume")}
                 >
                   <FiDownload />
                   <p>My Resume</p>
@@ -79,12 +76,8 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <div>
-
-          
-        </div>
+        <div></div>
       </div>
     </>
   );
 }
-
