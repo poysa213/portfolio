@@ -1,4 +1,5 @@
 "use client";
+import Contact from "@sections/ContactForm";
 import AboutMe from "@sections/about";
 import Header from "@sections/header";
 import Projects from "@sections/projects";
@@ -13,6 +14,7 @@ export default function Home() {
       <Projects />
 
       <Skills />
+      <Contact />
     </>
   );
 }
