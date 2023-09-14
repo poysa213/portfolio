@@ -127,7 +127,7 @@ export default function TopNavbar() {
           className="flex items-center md:gap-2"
         >
           {navigationRoutes.map((link, index) => {
-            const navlink = `${link.toLowerCase()}` === '/blog' ? 'https://poysa.hashnode.dev' : `${link.toLowerCase()}`;
+            const navlink =  `${link.toLowerCase()}`;
             return (
               <NavItem
                 key={index}
