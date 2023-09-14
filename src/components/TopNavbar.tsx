@@ -8,7 +8,6 @@ import {
   mobileNavItemSideways,
   popUp,
 } from "../content/FramerMotionVariants";
-import { useDarkMode } from "../context/darkModeContext";
 import { navigationRoutes, mobileNavigationRoutes } from "../utils/utils";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { HamBurgerProps, MobileMenuProps, NavItemProps } from "@types";
@@ -30,11 +29,7 @@ export default function TopNavbar() {
   
   //   return { isDarkMode, changeDarkMode };
   // };
-  const { isDarkMode, changeDarkMode } = useDarkMode();
 
-  const toggle = () => {
-    changeDarkMode(!isDarkMode);
-  }
 
   
 
@@ -144,22 +139,6 @@ export default function TopNavbar() {
           })}
         </motion.div>
       </motion.nav>
-
-      {/* DarkMode Container */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={popUp}
-        className="cursor-pointer rounded-full z-30 transition active:scale-75"
-        title="Toggle Theme"
-        onClick={toggle}
-      >
-        {isDarkMode ? (
-          <FiMoon  className="h-6 w-6 sm:h-7 sm:w-7 select-none transition active:scale-75" />
-        ) : (
-          <FiSun className="h-6 w-6 sm:h-7 sm:w-7 select-none transition active:scale-75" />
-        )}
-      </motion.div>
     </div>
     </nav>
   );

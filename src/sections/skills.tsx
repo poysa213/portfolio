@@ -19,7 +19,6 @@ import {
 import { RiCodeView } from "react-icons/ri";
 import { FaReact, FaNodeJs, FaFigma, FaCss3Alt } from "react-icons/fa";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
-import { useDarkMode } from "@context/darkModeContext";
 import * as WindowsAnimation from "@lib/windowsAnimation";
 import { Skill } from "@types";
 import PageTop from "@components/PageTop";
@@ -27,7 +26,6 @@ import { getSkills } from "@lib/dataFetch";
 
 export default function () {
   const skills: Skill[] = getSkills();
-  const { isDarkMode } = useDarkMode();
 
   return (
     <>
@@ -50,9 +48,6 @@ export default function () {
                   variants={popUp}
                   key={index}
                   title={skill.name}
-                  onMouseMove={(e) =>
-                    WindowsAnimation.showHoverAnimation(e, isDarkMode)
-                  }
                   onMouseLeave={(e) => WindowsAnimation.removeHoverAnimation(e)}
                   className="py-4 flex flex-col items-center justify-center sm:justify-start gap-4 bg-gray-50 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-700 transform origin-center md:origin-top group"
                 >
