@@ -53,7 +53,10 @@ const Contact = () => {
 
         <div className="flex items-center justify-center p-12">
           <div className="mx-auto w-4/5">
-            <form onSubmit={handleSubmit(submitHandler)} noValidate>
+            <form
+              action="https://getform.io/f/cf6a7040-b0d7-4635-a2fd-11a8c10f5c3e"
+              method="POST"
+            >
               <div className="mb-5">
                 <label
                   htmlFor="name"

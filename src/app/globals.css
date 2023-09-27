@@ -51,6 +51,14 @@
   font-display: swap;
   src: url(/fonts/Sarina/Sarina-400.woff2) format("woff2");
 }
+@font-face {
+  font-family: "Valencia";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(/fonts/valencia/Valencia.woff2) format("woff2");
+}
+
 
 body,
 html {
@@ -293,4 +301,53 @@ body {
   0% {
     background-position: 50px 50px;
   }
+}
+
+
+
+/* Animation for sliding in */
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* Animation for sliding out */
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.custom-slide-in-out.slide-in {
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.custom-slide-in-out.slide-out {
+  animation: slide-out 0.5s ease-in-out forwards;
+}
+
+
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-out {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }

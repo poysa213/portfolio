@@ -7,7 +7,7 @@ import Skills from "@sections/skills";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-white">
       <Header />
       <AboutMe />
 
@@ -15,6 +15,6 @@ export default function Home() {
 
       <Skills />
       <Contact />
-    </>
+    </div>
   );
 }

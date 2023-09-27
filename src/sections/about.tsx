@@ -103,7 +103,7 @@ export default function AboutMe() {
         >
           <AnimatedText
             variants={popUpFromBottomForText}
-            className="font-mono font-semibold text-[0.7rem] text-slate-500 dark:text-slate-400"
+            className="font-mono font-semibold text-2xl text-slate-500 dark:text-slate-400"
           >
             <h1>I'm Comfortable with</h1>
           </AnimatedText>
@@ -111,11 +111,9 @@ export default function AboutMe() {
             variants={popUpFromBottomForText}
             className="md:text-[1.3rem] text-slate-500 dark:text-slate-400 font-normal"
           >
-            @ Bootstrap&Tailwindcss <br />
-            @ Git&Python&Django <br />
-            @ PostgreSQL&Mysql <br />
-            @ ReactJS&NextJs <br />
-            @ Html&Css&Js <br />
+            @ Backend Development <br />
+            @ Frontend Development <br />
+            @ Full Stack Developement <br />
           </AnimatedText>
         </AnimatedDiv>
       </section>

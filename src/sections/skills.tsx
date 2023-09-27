@@ -1,132 +1,73 @@
 "use client";
-import React from "react";
-import { FadeContainer, popUp } from "../content/FramerMotionVariants";
-import { motion } from "framer-motion";
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiPython,
-  SiMysql,
-  SiDjango,
-  SiTypescript,
-  SiFirebase,
-  SiPostgresql,
-  SiJavascript,
-  SiPrisma,
-  SiGraphql,
-  SiExpress,
-} from "react-icons/si";
-import { RiCodeView } from "react-icons/ri";
-import { FaReact, FaNodeJs, FaFigma, FaCss3Alt } from "react-icons/fa";
-import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
-import * as WindowsAnimation from "@lib/windowsAnimation";
+import React, { useEffect, useState } from "react";
 import { Skill } from "@types";
 import PageTop from "@components/PageTop";
 import { getSkills } from "@lib/dataFetch";
 
-export default function () {
+interface SkillCardProps {
+  skill: Skill;
+  iconPath: string;
+}
+
+export default function SkillsPage() {
   const skills: Skill[] = getSkills();
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const skillsSection = document.getElementById("skills-section");
+      if (skillsSection) {
+        const rect = skillsSection.getBoundingClientRect();
+        const threshold = 0.4;
+        if (rect.top <= window.innerHeight * threshold) {
+          setInView(true);
+        } else {
+          setInView(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <section className="pageTop">
-        <PageTop pageTitle="Skills"></PageTop>
-        <section className="mx-5">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={FadeContainer}
-            viewport={{ once: true }}
-            className="grid my-10 gap-4 grid-col-1 lg:grid-cols-3 md:grid-cols-2 "
+      <section
+        id="skills-section"
+        className="my-10 lg:mx-2 lg:h-[100vh] flex justify-center items-center flex-col w-full"
+      >
+        <div className="w-full">
+          <PageTop pageTitle="Skills" />
+          <div
+            className={`grid my-10 gap-4 grid-col-1 lg:grid-cols-6 md:grid-cols-2 ${
+              inView ? "slide-in" : "slide-out"
+            }`}
           >
             {skills.map((skill, index) => {
-              const Icon: React.ElementType = chooseIcon(
-                skill.name.toLowerCase()
-              );
+              const iconPath = `/logos/${skill.name.toLowerCase()}.svg`;
               return (
-                <motion.div
-                  variants={popUp}
-                  key={index}
-                  title={skill.name}
-                  onMouseLeave={(e) => WindowsAnimation.removeHoverAnimation(e)}
-                  className="py-4 flex flex-col items-center justify-center sm:justify-start gap-4 bg-gray-50 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-700 transform origin-center md:origin-top group"
-                >
-                  <div className="relative transition group-hover:scale-110 sm:group-hover:scale-100 select-none pointer-events-none">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <p className="text-sm md:text-base font-semibold select-none pointer-events-none">
-                    {skill.name}
-                  </p>
-                </motion.div>
+                <SkillCard key={index} skill={skill} iconPath={iconPath} />
               );
             })}
-          </motion.div>
-        </section>
+          </div>
+        </div>
       </section>
     </>
   );
 }
-function chooseIcon(title: string) {
-  let Icon: React.ElementType;
-  switch (title) {
-    case "python":
-      Icon = SiPython;
-      break;
-    case "nextjs":
-      Icon = SiNextdotjs;
-      break;
-    case "reactjs":
-      Icon = FaReact;
-      break;
-    case "tailwind css":
-      Icon = SiTailwindcss;
-      break;
-    case "mysql":
-      Icon = SiMysql;
-      break;
-    case "django":
-      Icon = SiDjango;
-      break;
-    case "html":
-      Icon = AiFillHtml5;
-      break;
-    case "git":
-      Icon = AiFillGithub;
-      break;
-    case "typescript":
-      Icon = SiTypescript;
-      break;
-    case "node.js":
-      Icon = FaNodeJs;
-      break;
-    case "firebase":
-      Icon = SiFirebase;
-      break;
-    case "figma":
-      Icon = FaFigma;
-      break;
-    case "postgresql":
-      Icon = SiPostgresql;
-      break;
-    case "css":
-      Icon = FaCss3Alt;
-      break;
-    case "javascript":
-      Icon = SiJavascript;
-      break;
-    case "prisma":
-      Icon = SiPrisma;
-      break;
-    case "graphql":
-      Icon = SiGraphql;
-      break;
-    case "express.js":
-      Icon = SiExpress;
-      break;
 
-    default:
-      Icon = RiCodeView;
-      break;
-  }
-  return Icon;
+function SkillCard({ skill, iconPath }: SkillCardProps) {
+  return (
+    <div className="py-4 flex flex-col items-center justify-center sm:justify-start gap-4 bg-gray-50 hover:bg-white dark:bg-darkPrimary hover:dark:bg-darkSecondary border rounded-sm border-gray-300 dark:border-neutral-700">
+      <div className="relative transition group-hover:scale-110 sm:group-hover:scale-100 select-none pointer-events-none">
+        <img src={iconPath} alt={skill.name} className="w-6 h-6" />
+      </div>
+      <p className="text-sm md:text-base font-semibold select-none pointer-events-none">
+        {skill.name}
+      </p>
+    </div>
+  );
 }

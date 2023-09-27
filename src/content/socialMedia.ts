@@ -1,5 +1,5 @@
 import { AiOutlineTwitter } from "react-icons/ai";
-import {  BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
 
 export default [
@@ -11,7 +11,7 @@ export default [
   {
     title: "LinkedIn",
     Icon: BsLinkedin,
-    url: "https://www.linkedin.com/in/youcef-hanaia-25a28a220/",
+    url: "https://www.linkedin.com/in/poysa213/",
   },
   {
     title: "Github",
