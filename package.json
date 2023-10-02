@@ -33,7 +33,7 @@
     "@types/node": "^20.6.2",
     "@types/react": "^18.2.22",
     "concurrently": "^8.2.0",
-    "postcss": "^8.4.30",
+    "postcss": "^8.4.31",
     "postcss-preset-env": "^9.1.4",
     "tailwind-scrollbar-hide": "^1.1.7"
   }
