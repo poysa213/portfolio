@@ -6,7 +6,6 @@ export const navigationRoutes = [
   "/skills",
   "/projects",
   "/resume",
-  "/blog",
   
 ];
 
@@ -16,5 +15,4 @@ export const mobileNavigationRoutes = [
   "/skills",
   "/projects",
   "/resume",
-  "/blog",
 ];

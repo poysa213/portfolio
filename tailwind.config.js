@@ -1,10 +1,10 @@
 module.exports = {
   content: [
-    './src/app/**/*.{js,ts,jsx,tsx}',
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/layouts/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/layouts/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -13,12 +13,16 @@ module.exports = {
       sarina: ["Sarina", "cursive"],
       barlow: ["Barlow", "sans-serif"],
       mono: ["monospace"],
+      valencia: ["Valencia", "valencia"],
     },
     extend: {
       colors: {
         darkPrimary: "#181A1B",
         darkSecondary: "#25282A",
         darkWhite: "#f2f5fa",
+        customGrey: "#e5e5e5",
+        customOrange: "#fca311",
+        customBlueNuit: "#14213d",
       },
       listStyleType: {
         square: "square",

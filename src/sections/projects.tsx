@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import { AnimatePresence } from "framer-motion";
 import Project from "@components/Project";
@@ -9,13 +9,12 @@ import { FadeContainer } from "@content/FramerMotionVariants";
 import { ProjectType } from "@types";
 
 export default function Projects() {
-    const projects: ProjectType[] = getProjects();
+  const projects: ProjectType[] = getProjects();
   return (
     <>
       <section className="pageTop">
-        
         <PageTop pageTitle="Projects">
-        {/* <p className="text-red-200">I will add all my projects Here as soon as i can, Thanks&#60;3</p> */}
+          {/* <p className="text-red-200">I will add all my projects Here as soon as i can, Thanks&#60;3</p> */}
           I've been making various types of projects some of them were basics
           and some of them were complicated. So far I've made{" "}
           <span className="font-bold text-gray-600 dark:text-gray-200">
@@ -41,4 +40,3 @@ export default function Projects() {
     </>
   );
 }
-

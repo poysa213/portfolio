@@ -51,6 +51,14 @@
   font-display: swap;
   src: url(/fonts/Sarina/Sarina-400.woff2) format("woff2");
 }
+@font-face {
+  font-family: "Valencia";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(/fonts/valencia/Valencia.woff2) format("woff2");
+}
+
 
 body,
 html {
@@ -294,30 +302,52 @@ body {
     background-position: 50px 50px;
   }
 }
-/* Main styles */
-body {
-  /* margin-top: 13.5rem; */
-  color: #999;
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  /* text-align: center; */
-  /* img size is 50x50 */
-  background: url("data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 3s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 3s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 3s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 3s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
+
+
+
+/* Animation for sliding in */
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 
-.darkBack {
-  background: url("data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAc0lEQVR4nO3ZsQ2AMBAEwYcSTIsvmaJwibgGMiQkko38wU4Fq0tv6/0c42rtiDLmvCMiMnN1yUdmRqmdXvvqgH9mEWYRZhFmEWYRZhFmEWYRZhFmEWYRZhFmEWYRZhFmEWYRZhFmEWYRZhFmEUWzIkr+iQ/wKQtRwWhBSwAAAABJRU5ErkJggg==") repeat 0 0;
+
+/* Animation for sliding out */
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
+.custom-slide-in-out.slide-in {
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.custom-slide-in-out.slide-out {
+  animation: slide-out 0.5s ease-in-out forwards;
+}
+
+
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-out {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
