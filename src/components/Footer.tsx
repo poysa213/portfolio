@@ -5,7 +5,7 @@ import { Social } from "./Social";
 
 export default function Footer() {
   return (
-    <footer className="w-full px-4  text-gray-600 dark:text-white  font-mono print:hidden bg-white dark:bg-gray-400/10 flex flex-col">
+    <footer id="footer" className="w-full px-4  text-gray-600 dark:text-white  font-mono print:hidden bg-white dark:bg-gray-400/10 flex flex-col">
       <motion.div
         initial="hidden"
         whileInView="visible"

@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function AboutMe() {
   return (
-    <section className="pageTop">
+    <section id="about" className="pageTop">
       <PageTop pageTitle="About me" />
       <section className="text-md md:m-0 sm:text-base  justify-center ">
         <div className="items-end mx-auto flex justify-center p-16">
