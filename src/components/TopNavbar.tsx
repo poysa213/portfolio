@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import NextLink from "next/link";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { HamBurgerProps, MobileMenuProps, NavItemProps } from "@types";
@@ -10,7 +10,7 @@ import {
   popUp,
 } from "../content/FramerMotionVariants";
 import { navigationRoutes, mobileNavigationRoutes } from "../utils/utils";
-import { Link } from "react-scroll";
+
 
 export default function TopNavbar() {
   const router = useRouter();
@@ -98,7 +98,7 @@ export default function TopNavbar() {
           variants={FadeContainer}
           className="flex items-center md:gap-2"
         >
-          <Link to="/" className="relative hidden sm:inline-flex mr-3">
+          <Link href="/" className="relative hidden sm:inline-flex mr-3">
             <div className="flex gap-2 items-center cursor-pointer z-50">
               <h3 className=" font-medium">
                 poysa213:~#<span className="animate-ping">_</span>
@@ -143,8 +143,20 @@ export default function TopNavbar() {
 }
 
 function NavItem({ href, text, router }: NavItemProps) {
-  const isActive = router.asPath === href;
-  return <Link to={href} smooth={true} duration={500} offset={-100}></Link>;
+ 
+  const navlink = href.toLowerCase() == '/resume'  ? '/resume' : `${"#"+href.toLowerCase().substring(1)}`;
+  return (
+
+    <Link  href={navlink}>
+              <motion.a
+                href={navlink}
+                className="border-b border-gray-300 text-gray-900 font-semibold flex w-auto py-4 capitalize text-base cursor-pointer"
+                variants={mobileNavItemSideways}
+              >
+                {href}
+              </motion.a>
+            </Link>
+  );
 }
 
 function HamBurger({ open, handleClick }: HamBurgerProps) {
@@ -205,22 +217,16 @@ const MobileMenu = ({ links, handleClick }: MobileMenuProps) => {
     >
       <motion.nav className="mt-28 mx-8 flex flex-col">
         {links.map((link, index) => {
-          const navlink =
-            `${link.toLowerCase()}` === "/home"
-              ? "/"
-              : `${link.toLowerCase()}` === "/blog"
-              ? "https://poysa.hashnode.dev"
-              : `${link.toLowerCase()}`;
+          const navlink = link.toLocaleLowerCase() == "/resume" ? "/resume" : `${"#"+link.toLowerCase().substring(1)}`;
           return (
-            <Link to={navlink} key={`mobileNav-${index}`}>
-              <motion.a
-                href={navlink}
+            <Link  href={navlink} key={`mobileNav-${index}`}>
+              <motion.p
                 className="border-b border-gray-300 text-gray-900 font-semibold flex w-auto py-4 capitalize text-base cursor-pointer"
                 variants={mobileNavItemSideways}
                 onClick={handleClick}
               >
-                {link === "rss" ? link.toUpperCase() : link}
-              </motion.a>
+                {link}
+              </motion.p>
             </Link>
           );
         })}

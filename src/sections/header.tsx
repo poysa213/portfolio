@@ -12,7 +12,7 @@ import { Social } from "@components/Social";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="relative  bg-white dark:text-gray-100 max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl mx-auto">
+    <section  id="header" className="relative  bg-white dark:text-gray-100 max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl mx-auto">
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -41,6 +41,6 @@ export default function Header() {
           </div>
         </div>
       </motion.section>
-    </div>
+    </section>
   );
 }

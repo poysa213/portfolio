@@ -47,8 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <section className="pageTop">
+      <section id="contact" className="pageTop">
         <PageTop pageTitle="Contact me" />
 
         <div className="flex items-center justify-center p-12">
@@ -166,7 +165,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 
