@@ -47,12 +47,11 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <section className="pageTop">
+      <section id="contact" className="pageTop">
         <PageTop pageTitle="Contact me" />
 
         <div className="flex items-center justify-center p-12">
-          <div className="mx-auto w-4/5">
+          <div className="mx-auto md:w-4/5 w-full">
             <form
               action="https://getform.io/f/cf6a7040-b0d7-4635-a2fd-11a8c10f5c3e"
               method="POST"
@@ -166,7 +165,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 

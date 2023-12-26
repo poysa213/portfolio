@@ -11,8 +11,7 @@ import { ProjectType } from "@types";
 export default function Projects() {
   const projects: ProjectType[] = getProjects();
   return (
-    <>
-      <section className="pageTop">
+      <section id="projects" className="pageTop">
         <PageTop pageTitle="Projects">
           {/* <p className="text-red-200">I will add all my projects Here as soon as i can, Thanks&#60;3</p> */}
           I've been making various types of projects some of them were basics
@@ -37,6 +36,5 @@ export default function Projects() {
           </AnimatePresence>
         </AnimatedDiv>
       </section>
-    </>
   );
 }

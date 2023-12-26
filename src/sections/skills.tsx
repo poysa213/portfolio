@@ -15,7 +15,7 @@ export default function SkillsPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const skillsSection = document.getElementById("skills-section");
+      const skillsSection = document.getElementById("skills");
       if (skillsSection) {
         const rect = skillsSection.getBoundingClientRect();
         const threshold = 0.4;
@@ -36,7 +36,7 @@ export default function SkillsPage() {
   return (
     <>
       <section
-        id="skills-section"
+        id="skills"
         className="my-10 lg:mx-2 lg:h-[100vh] flex justify-center items-center flex-col w-full"
       >
         <div className="w-full">

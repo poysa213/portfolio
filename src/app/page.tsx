@@ -10,9 +10,7 @@ export default function Home() {
     <div className="bg-white">
       <Header />
       <AboutMe />
-
       <Projects />
-
       <Skills />
       <Contact />
     </div>
