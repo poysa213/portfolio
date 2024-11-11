@@ -1,18 +1,15 @@
 import { useRouter } from "next/navigation";
-import {
-  FadeContainer,
-  opacityVariant,
-  popUp,
-} from "@content/FramerMotionVariants";
+import { FadeContainer, opacityVariant } from "@content/FramerMotionVariants";
 import { motion } from "framer-motion";
-import { FiDownload } from "react-icons/fi";
-import Ripples from "react-ripples";
 import { Social } from "@components/Social";
 
 export default function Header() {
   const router = useRouter();
   return (
-    <section  id="header" className="relative  bg-white dark:text-gray-100 max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl mx-auto">
+    <section
+      id="header"
+      className="relative  bg-white dark:text-gray-100 max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl mx-auto"
+    >
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -36,6 +33,17 @@ export default function Header() {
               >
                 Full Stack Developer
               </motion.p>
+
+              <div className="flex justify-center my-8">
+                <a
+                  href="https://drive.google.com/file/d/1sF2XWjaiSuwAS1XvJvxExlleacVNeNKy/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white font-semibold py-2 px-6 rounded-lg transition duration-300"
+                >
+                  View My Resume
+                </a>
+              </div>
               <Social />
             </div>
           </div>
